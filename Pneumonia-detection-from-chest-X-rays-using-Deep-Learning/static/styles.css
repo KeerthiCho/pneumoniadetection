@@ -1,0 +1,79 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #141414;
+    background-image: 
+        linear-gradient(90deg, rgba(53, 53, 53, 0.8), rgba(173, 169, 169, 0.8)),
+        url("https://img.freepik.com/free-vector/panorama-foggy-morning-horizontal-blurred-background-with-trees-vector-abstract-landscape_105738-1682.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #e5e5e5;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px;
+    text-align: center;
+    background: rgba(20, 20, 20, 0.8);  
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 40px; 
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #e5e5e5;
+}
+
+.card {
+    background-color: rgba(51, 51, 51, 0.8); 
+    border: none;
+    border-radius: 40px; 
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.card-body {
+    padding: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgba(229, 9, 20, 0.9); 
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px; 
+}
+
+button:hover {
+    background-color: rgba(178, 7, 16, 0.9); 
+}
+
+.img-thumbnail {
+    margin-top: 20px;
+    border: none;
+    border-radius: 40px; 
+}
+
+.alert-danger {
+    background-color: rgba(229, 9, 20, 0.6); 
+    color: white;
+    border: none;
+    border-radius: 40px; 
+}
+
+.alert-success {
+    background-color: rgba(76, 175, 80, 0.6); 
+    color: white;
+    border: none;
+    border-radius: 40px; 
+}
+
+.form-group label {
+    color: rgba(229, 229, 229, 0.9); 
+}

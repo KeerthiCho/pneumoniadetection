@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pneumonia Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Pneumonia Detection</h1>
+        <div class="card bg-dark text-light">
+            <div class="card-body">
+                <form action="/" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="file">Upload an X-ray image</label>
+                        <input type="file" class="form-control-file" name="file" accept="image/*" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-block">Upload</button>
+                </form>
+                {% if prediction %}
+                    <div class="mt-4">
+                        <h2>Prediction: {{ prediction }}</h2>
+                        <div class="text-center">
+                            <img src="{{ image }}" alt="Uploaded Image" class="img-thumbnail" style="max-width: 200px;">
+                        </div>
+                        {% if prediction == 'Pneumonia Positive' %}
+                            <p class="alert alert-danger mt-4">Take care of your health. You have tested positive for pneumonia. Consult a doctor and get treatment.</p>
+                        {% else %}
+                            <p class="alert alert-success mt-4">Great! You have tested negative for pneumonia. Keep maintaining a healthy lifestyle.</p>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                {% if error_message %}
+                    <div class="alert alert-danger mt-4">
+                        {{ error_message }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
